@@ -16,7 +16,7 @@ Use voice control to trigger a deployment secured by a confirmation code sent to
 - ssh to raspberry 
 
 ```
-ssh pi@192.168.0.124, most likely)
+ssh pi@192.168.0.124
 ```
 - start nodejs server
 

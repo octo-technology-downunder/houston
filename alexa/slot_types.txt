@@ -1,0 +1,9 @@
+LIST_OF_CODES:  
+kangaroo | koala | shark | spider | wallaby | platypus | crocodile | whale
+
+LIST_OF_ENVIRONMENTS
+dev | development | uat | preprod | preproduction | prod | production | moon | mars
+
+LIST_OF_APPLICATIONS
+rocket | shuttle | pod | spaceship
+

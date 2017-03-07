@@ -1,0 +1,23 @@
+{
+  "intents": [
+    {
+      "intent": "Deploy",
+      "slots": [
+        {"name": "application","type": "LIST_OF_APPLICATIONS"},
+        {"name": "environment","type": "LIST_OF_ENVIRONMENTS"}
+      ]
+    },
+    {
+      "intent": "Confirm",
+      "slots": [
+        {"name": "code","type": "LIST_OF_CODES"}
+      ]
+    },
+    {
+      "intent":"AMAZON.PauseIntent"
+    },
+    {
+      "intent": "AMAZON.ResumeIntent"
+    }
+  ]
+}

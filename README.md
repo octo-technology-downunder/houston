@@ -25,7 +25,7 @@ cd houston
 
 nohup nodejs bin/www &
 ```
-- start up instance **Houston demo alexa** on [AWS](https://ap-southeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-southeast-2#Instances:sort=instanceId)
+- start up instance **Houston-jenkins** on [AWS](https://ap-southeast-2.console.aws.amazon.com/ec2/v2/home?region=ap-southeast-2#Instances:sort=instanceId). /For now, you need to update the lambda with the new Jenkins url (as it is not a fixed url, no elastic Ip)/.
 - create deployment request, eg:
 
 "Echo, deploy rocket to production using Houston"

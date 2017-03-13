@@ -5,7 +5,7 @@ const dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 const Alexa = require('alexa-sdk');
 const https = require('https');
 const http = require('http');
-const confirmation_codes = ['kangaroo', 'koala', 'shark']
+const confirmation_codes = ['kangaroo', 'koala', 'shark', 'spider', 'wallaby', 'platypus', 'crocodile', 'whale']
 
 const handlers = {
   'LaunchRequest': function () {
@@ -33,7 +33,7 @@ const handlers = {
     dynamodb.putItem({ "TableName": "houston", "Item" : { "code": {"S": "" + confirmation_code }, "application": {"S": application }, "environment": {"S": environment }}}, (err, data) => {
       if (err) {
         console.log(err);
-        this.emit(':tell', "Error when saving");
+        this.emit(':tell', "Error when saving confirmation code");
       } else {
         console.log(data);
       }

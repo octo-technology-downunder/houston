@@ -5,5 +5,4 @@ LIST_OF_ENVIRONMENTS
 dev | development | uat | preprod | preproduction | prod | production | moon | mars
 
 LIST_OF_APPLICATIONS
-rocket | shuttle | pod | spaceship
-
+application | rocket | shuttle | pod | spaceship

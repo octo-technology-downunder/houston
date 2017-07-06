@@ -20,7 +20,7 @@ nohup nodejs bin/www &
 # API
 
 ```
-curl -d '{"text":"Text to display","move_message":"true"}' http://localhost:3000/messages/ -v  -H "Content-Type: application/json"
+curl -d '{"text":"MyApplication code:\nkangaroo","move_message":"true"}' http://localhost:3000/messages/ -v  -H "Content-Type: application/json"
 ```
 
 The text can be up to 2 lines (with the \n separator), and un to 16 ASCII characters per line.

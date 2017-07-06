@@ -79,7 +79,7 @@ const handlers = {
             'Content-Type': 'application/json'
           }
         };
-        http.get('http://ec2-13-55-186-2.ap-southeast-2.compute.amazonaws.com/job/Deploying%20application/buildWithParameters?token=EFA_EST_MEC_TROP_STYLE&APPLICATION=' + application + '&ENVIRONMENT=' + environment, (error) => {
+        http.get('http://ec2-13-210-41-128.ap-southeast-2.compute.amazonaws.com/job/Deploying%20application/buildWithParameters?token=EFA_EST_MEC_TROP_STYLE&APPLICATION=' + application + '&ENVIRONMENT=' + environment, (error) => {
           console.log(error)
           dynamodb.deleteItem({ "TableName": "houston", "Key" : { "code": {"S": "" + confirmation_code }  } }, (err, data) => {
             console.log(error)

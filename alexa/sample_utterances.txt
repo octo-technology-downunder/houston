@@ -1,13 +1,14 @@
-Deploy deploy {application} to {environment} 
-Deploy deploy {application} to the {environment} 
-Deploy deploy {application} to the {environment} 
-Deploy send {application} to {environment} 
-Deploy send {application} to the {environment} 
+Deploy deploy {application} to {environment}
+Deploy deploy {application} to {environment} environment
+Deploy deploy {application} to the {environment}
+Deploy deploy {application} to the {environment}
+Deploy send {application} to {environment}
+Deploy send {application} to the {environment}
 Deploy deploy {application} to the {environment} environment
-Deploy deploy my {application} on {environment} 
-Deploy deploy my {application} to {environment} 
-Deploy push {application} to {environment} 
-Deploy push {application} to the {environment} 
+Deploy deploy my {application} on {environment}
+Deploy deploy my {application} to {environment}
+Deploy push {application} to {environment}
+Deploy push {application} to the {environment}
 Deploy push {application} to the {environment} environment
 
 Confirm confirm with code {code}
@@ -15,4 +16,5 @@ Confirm confirm deployment with code {code}
 Confirm confirm with {code}
 Confirm confirm deployment with {code}
 Confirm confirm {code}
+Confirm confirm operation {code}
 Confirm confirm deployment {code}

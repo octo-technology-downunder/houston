@@ -13,13 +13,13 @@ Use voice control to trigger a deployment secured by a confirmation code sent to
 # Setup
 
 - Power up a raspberry pi, and have it connected to a 16x2 LCD screen, using the following pins:
-* pin 27 to LCD RS
-* pin 22 to LCD clock enable
-* pin 25 to LCD data line 4
-* pin 24 to LCD data line 5
-* pin 23 to LCD data line 6
-* pin 18 to LCD data line 7
-* pin 4 to LCD backlight
+-- pin 27 to LCD RS
+-- pin 22 to LCD clock enable
+-- pin 25 to LCD data line 4
+-- pin 24 to LCD data line 5
+-- pin 23 to LCD data line 6
+-- pin 18 to LCD data line 7
+-- pin 4 to LCD backlight
 - Add the [lcd_display_server](lcd_display_server) folder to your raspberry
 - ssh to your raspberry and start the server
 ```
@@ -39,6 +39,7 @@ curl -d '{"text":"Hello pi","move_message":"true"}' https://xxxxxx.dataplicity.i
 - Configure an Alexa skill using the content of the alexa folder
 - Create a lambda function and have it triggered by you Alexa skill
 - Copy-paste the content of [lambda/index.js](lambda/index.js) to the lambda function
+- Create a Jenkins job on your [Jenkins](https://jenkins.io/) server configuring 2 job String parameters, APPLICATION and ENVIRONMENT (note: for simplicity's sake, there is no authentication configured to trigger the job. You can easily add an access token to the request headers. It is also possible to use another CI/CD server than Jenkins, the API call must then be updated accordingly)
 - Update the values of $JENKINSJOBURL and $DATAPLICITYHOSTNAME on the lambda function with your actual Jenkins job url and dataplicity url
 
 # Demo
@@ -50,4 +51,4 @@ curl -d '{"text":"Hello pi","move_message":"true"}' https://xxxxxx.dataplicity.i
 - confirm deployment, eg:
 
 "Echo, confirm deployment koala"
-- read console output on [jenkins](http://$JENKINSJOBURL/job/Houston/)
+- read console output on Jenkins

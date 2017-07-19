@@ -6,6 +6,8 @@ const Alexa = require('alexa-sdk');
 const https = require('https');
 const http = require('http');
 const confirmation_codes = ['kangaroo', 'koala', 'shark', 'spider', 'wallaby', 'platypus', 'crocodile', 'whale']
+const dataplicity_host = $DATAPLICITYHOSTNAME
+const jenkins_job = $JENKINSJOBURL
 
 const handlers = {
   'LaunchRequest': function () {
@@ -22,7 +24,7 @@ const handlers = {
     var confirmation_code = confirmation_codes[code_index];
     var post_data = JSON.stringify({"text":application + ' code:\n' + confirmation_code,"move_message":"false"});
     var post_options = {
-      host: '797a65777a.dataplicity.io',
+      host: dataplicity_host,
       port: '443',
       path: '/messages',
       method: 'POST',
@@ -71,7 +73,7 @@ const handlers = {
         }
         let post_data = JSON.stringify({"text": application + " deployed\nto " + environment + " :heart:" ,"move_message":"false"});
         let post_options = {
-          host: '797a65777a.dataplicity.io',
+          host: dataplicity_host,
           port: '443',
           path: '/messages',
           method: 'POST',
@@ -79,7 +81,7 @@ const handlers = {
             'Content-Type': 'application/json'
           }
         };
-        http.get('http://ec2-13-210-41-128.ap-southeast-2.compute.amazonaws.com/job/Deploying%20application/buildWithParameters?token=EFA_EST_MEC_TROP_STYLE&APPLICATION=' + application + '&ENVIRONMENT=' + environment, (error) => {
+        http.get(jenkins_job + 'APPLICATION=' + application + '&ENVIRONMENT=' + environment, (error) => {
           console.log(error)
           dynamodb.deleteItem({ "TableName": "houston", "Key" : { "code": {"S": "" + confirmation_code }  } }, (err, data) => {
             console.log(error)

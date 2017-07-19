@@ -33,7 +33,7 @@ nohup nodejs bin/www &
 - confirm deployment, eg:
 
 "Echo, confirm deployment koala"
-- read console output on [jenkins](http://ec2-13-55-186-2.ap-southeast-2.compute.amazonaws.com/job/Deploying%20application/)
+- read console output on [jenkins](http://$JENKINSJOBURL/job/Houston/)
 
 # TODO:
 Get dynamic jenkins URL from lambda
